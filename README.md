@@ -9,7 +9,7 @@
 <br><br>
 
 <a href="https://youtu.be/maayqyNRVoU?si=V0o0wDq81uYf2KAk">
-  <img src="https://i.postimg.cc/mgFkCk39/IMG-20250105-WA0013.jpg" alt="Nayan Bot" height="280" style="border-radius:20px; box-shadow: 0 8px 32px rgba(0,255,136,0.3);">
+  <img src="https://i.postimg.cc/mgFkCk39/IMG-20250105-WA0013.jpg" alt="Fahim Bot" height="280" style="border-radius:20px; box-shadow: 0 8px 32px rgba(0,255,136,0.3);">
 </a>
 
 <br><br>
