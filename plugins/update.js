@@ -9,7 +9,7 @@ module.exports = {
         description: 'Pull latest code from GitHub and restart.',
         category: 'system',
         usages: ['.update'],
-        credit: 'Developed by Fahim Hussain'
+        credit: 'Developed by Mohammad Nayan'
     },
 
     start: async ({ event, api }) => {
@@ -17,20 +17,17 @@ module.exports = {
 
         await api.sendMessage(threadId, { text: "🔄 GitHub theke latest code update neya hoche..." });
 
-        // Git pull ebong automatic restart chalanor command
+        // HostingNet-er jonno safely restart command
         exec("git pull", (error, stdout, stderr) => {
             if (error) {
                 return api.sendMessage(threadId, { text: `❌ Error: ${error.message}` });
             }
-            if (stderr && !stderr.includes("From github.com")) {
-                return api.sendMessage(threadId, { text: `⚠️ Warning: ${stderr}` });
-            }
             
-            api.sendMessage(threadId, { text: `✅ GitHub pull done!\n\n${stdout}\n\n🔄 Bot restart hoche...` });
+            api.sendMessage(threadId, { text: `✅ GitHub pull done!\n\n🔄 Bot safely restart hoche...` });
             
-            // Bot automatic restart korar jonno process exit (HostingNet auto-restart korbe)
+            // safely process exit output normal code (0)
             setTimeout(() => {
-                process.exit(1);
+                process.exit(0);
             }, 2000);
         });
     }
