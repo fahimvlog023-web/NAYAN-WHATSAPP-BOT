@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-// ─── অটোমেটিক ফন্ট স্টাইল কনভার্টার ───
+// ─── আপনার পছন্দের কিউট স্মল-ক্যাপস ফন্ট কনভার্টার ───
 function stylishFont(text) {
   const fonts = {
     'a': 'ᴀ', 'b': 'ʙ', 'c': 'ᴄ', 'd': 'ᴅ', 'e': 'ᴇ', 'f': 'ꜰ', 'g': 'ɢ', 'h': 'ʜ',
@@ -20,7 +20,7 @@ module.exports = {
     prefix: true,
     description: 'Show all available commands.',
     category: 'Utility',
-    credit: 'Developed by Fahim Hussine',
+    credit: 'Developed by Mohammad Nayan',
     usages: ['help', 'help [command name]'],
   },
 
@@ -34,13 +34,13 @@ module.exports = {
 
     // ক্যাটাগরিগুলো সুন্দর ইমোজি দিয়ে সাজানো
     const mergedCategories = {
-      "👑 𝗔𝗗𝗠𝗜𝗡𝗜𝗦𝗧𝗥𝗔𝗧𝗜𝗢𝗡": ["Administration", "Admin", "Owner", "Bot Management", "System"],
+      "👑 𝗔𝗗𝗠𝗜𝗡𝗜𝗦𝗧𝗥𝗔𝗧𝗜𝗢??": ["Administration", "Admin", "Owner", "Bot Management", "System"],
       "🧠 𝗔𝗜 𝗖𝗛𝗔𝗧𝗕𝗢𝗧": ["AI", "AI Chat"],
-      "🎬 𝗠𝗘𝗗𝗜𝗔 & 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗": ["Media", "Video", "Image"],
+      "🎬 𝗠𝗘𝗗??𝗔 & 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗": ["Media", "Video", "Image"],
       "🧰 𝗨𝗧𝗜𝗟𝗜𝗧𝗜𝗘𝗦": ["Utility", "Utilities"],
-      "👥 𝗚𝗥𝗢𝗨𝗣 𝗠𝗢𝗗𝗘𝗥𝗔𝗧𝗜𝗢𝗡": ["Group Management", "group", "Moderation"],
-      "🎮 𝗙𝗨𝗡 & 𝗚𝗔𝗠𝗘𝗦": ["Fun", "Games", "greetings"],
-      "🛰️ 𝗦𝗠𝗔𝗥𝗧 𝗧𝗢𝗢𝗟𝗦": ["Tools", "Information"]
+      "👥 𝗚𝗥𝗢𝗨𝗣 𝗠𝗢𝗗𝗘𝗥𝗔𝗧𝗜𝗢??": ["Group Management", "group", "Moderation"],
+      "🎮 𝗙𝗨?? & 𝗚𝗔𝗠𝗘𝗦": ["Fun", "Games", "greetings"],
+      "🛰️ 𝗦🇲🇦𝗥𝗧 𝗧𝗢??𝗟𝗦": ["Tools", "Information"]
     };
 
     const categories = {};
@@ -64,14 +64,14 @@ module.exports = {
 ╭══──────══╮
   ✨ 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗜𝗡𝗙𝗢 ✨
 ╰══──────══╯
- 🔹 𝗡𝗮𝗺𝗲: ${command.name}
- 🔹 𝗔𝗹𝗶𝗮𝘀𝗲𝘀: ${command.aliases?.join(", ") || "None"}
- 🔹 𝗩𝗲𝗿𝘀𝗶𝗼𝗻: ${command.version || "1.0.0"}
- 🔹 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻: ${command.description || "No description"}
- 🔹 𝗨𝘀𝗮𝗴𝗲: ${command.usage || command.usages?.join("\n│   ") || "Not defined"}
- 🔹 𝗣𝗲𝗿𝗺𝗶𝘀𝘀𝗶𝗼𝗻: ${command.permission}
- 🔹 𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝘆: ${command.category || "Uncategorized"}
- 🔹 𝗖𝗿𝗲𝗱𝗶𝘁𝘀: ${command.credit || command.credits || "Fahim Hussine"}
+ 🦋 *𝗡𝗮𝗺𝗲:* ${command.name}
+ 🦋 *𝗔𝗹𝗶𝗮𝘀𝗲𝘀:* ${command.aliases?.join(", ") || "None"}
+ 🦋 *𝗩𝗲𝗿𝘀𝗶𝗼𝗻:* ${command.version || "1.0.0"}
+ 🦋 *𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻:* ${command.description || "No description"}
+ 🦋 *𝗨𝘀𝗮𝗴𝗲:* ${command.usage || command.usages?.join("\n│   ") || "Not defined"}
+ 🦋 *𝗣𝗲𝗿𝗺𝗶𝘀𝘀𝗶𝗼𝗻:* ${command.permission}
+ 🦋 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝘆:* ${command.category || "Uncategorized"}
+ 🦋 *𝗖𝗿𝗲𝗱𝗶𝘁𝘀:* ${command.credit || command.credits || "Fahim Hussine"}
 ╭══──────══╮`;
         await api.sendMessage(threadId, { text: infoText });
       } else {
@@ -91,28 +91,26 @@ module.exports = {
     });
 
     // ───── MAIN HELP MENU DESIGN ─────
-    let responseText = `╭═══𝄟 💜 𝄟═══╮
-   ✨ 𝗙𝗔𝗛𝗜𝗠 𝗕𝗢𝗧 ✨
-╰═══𝄟 💜 𝄟═══╯
-│ 👑 𝙊𝙬𝙣𝙚rer: ${global.config.botOwner || "Fahim Hussine"}
-│ ⭕ 𝙋𝙧𝙚𝙛𝙞𝙭: \`${prefix || globalPrefix}\`
-│ 📊 𝙏𝙤𝙩𝙖𝙡 𝘾𝙢𝙙𝙨: ${commands.length}
-│ 🕒 𝙏𝙞𝙢𝙚: ${currentTime}
-│ 📅 𝘿𝙖𝙩𝙚: ${currentDate}
-╰═════════════╯
- 
-「 𝗔𝗩𝗔𝗜𝗟𝗔𝗕𝗟𝗘 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 」`;
+    let responseText = `╭════════𝄟 💜 𝄟════════╮
+       ✨ 𝗙𝗔𝗛𝗜𝗠 𝗕𝗢𝗧 ✨
+╰════════𝄟 💜 𝄟════════╯
+│ 👑 *𝙊𝙬𝙣𝙚𝙧:* ${global.config.botOwner || "Fahim Hussine"}
+│ ⭕ *𝙋𝙧𝙚𝙛𝙞𝙭:* \`${prefix || globalPrefix}\`
+│ 📊 *𝙏𝙤𝙩𝙖𝙡 𝘾𝙢𝙙𝙨:* ${commands.length}
+│ 🕒 *𝙏𝙞𝙢𝙚:* ${currentTime}
+│ 📅 *𝘿𝙖𝙩𝙚:* ${currentDate}
+╰═══════════════════════╯`;
 
     for (const category in categories) {
-      // 💡 এখানে stylishFont ফাংশন ব্যবহার করে কমান্ডের নামগুলো কিউট স্টাইলিশ করা হয়েছে
-      const cmds = categories[category]
-        .map(cmd => `  ├─  ${prefix}${stylishFont(cmd.name)}`)
-        .join("\n");
+      // 💡 কমান্ডগুলোকে নিচে নিচে না দিয়ে কমা দিয়ে পাশাপাশি এক লাইনে সাজানো হয়েছে
+      const cmdList = categories[category]
+        .map(cmd => `${prefix}${stylishFont(cmd.name)}`)
+        .join(", ");
 
-      responseText += `\n\n🔵 ${category}\n${cmds}\n  ╰──────────────`;
+      responseText += `\n\n*╭──❒ ${category} ❒*\n> *🎀👀 ➔ ${cmdList}*\n*╰───────────────────❒*`;
     }
 
-    responseText += `\n\n╭══──────══╮\n  💡 Type ${prefix}help [cmd] \n╰══──────══╯`;
+    responseText += `\n\n╭═══════════════════════╮\n  💡 *Type ${prefix}help [cmd] for details* \n╰═══════════════════════╯\n\n_Made with 💜 by Fahim Bbz_`;
 
     try {
       const response = await axios.get(global.config.helpPic, { responseType: 'stream' });
