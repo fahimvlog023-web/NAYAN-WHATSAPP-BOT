@@ -59,10 +59,11 @@ module.exports = {
                 text: `✅ সফলভাবে মোট ${updatedCount}টি ফাইল গিটহাব থেকে আপডেট/ডাউনলোড করা হয়েছে!\n\n🔄 নতুন সব কমান্ড চালু করার জন্য বট রিস্টার্ট হচ্ছে...` 
             });
 
-            // হোস্টিং নেট সার্ভার সেফলি রিস্টার্ট করা
-            setTimeout(() => {
-                process.exit(0);
-            }, 2500);
+            // HostingNet-কে বাধ্য করা যাতে সে বট অটো-রিস্টার্ট দেয়
+setTimeout(() => {
+    throw new Error("🔄 HostingNet Auto-Restart Triggered!");
+}, 2500);
+
 
         } catch (error) {
             await api.sendMessage(threadId, { text: `❌ Error: ${error.message}\nদয়া করে আপনার গিটহাবের ফোল্ডার বা ইউজারনেম চেক করুন।` });
