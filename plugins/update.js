@@ -17,15 +17,15 @@ module.exports = {
     start: async ({ event, api }) => {
         const { threadId } = event;
 
-        // ─── আপনার গিটহাবের সঠিক তথ্য ───
+        // ─── আপনার গিটহাবের সঠিক তথ্য (ফিক্সড) ───
         const USERNAME = "fahimvlog023-web";
         const REPO = "FAHIM-WHATSAPP-BOT";
-        const FOLDER_PATH = "commands"; // আপনার কমান্ড ফোল্ডারের নাম (commands বা plugins)
+        const FOLDER_PATH = "plugins"; // 💡 নয়নের বটের ফোল্ডারের নাম 'plugins'
 
         // গিটহাবের ফোল্ডার ফাইল লিস্ট দেখার API URL
         const GITHUB_API_URL = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FOLDER_PATH}`;
 
-        await api.sendMessage(threadId, { text: "🔄 GitHub এর ফোল্ডার স্ক্যান করে নতুন ফাইল খোঁজা হচ্ছে..." });
+        await api.sendMessage(threadId, { text: "🔄 GitHub এর প্লাগিন্স ফোল্ডার স্ক্যান করে ফাইল খোঁজা হচ্ছে..." });
 
         try {
             // গিটহাব থেকে ফোল্ডারের ভেতরের সব ফাইলের লিস্ট আনা
@@ -38,7 +38,7 @@ module.exports = {
             }
 
             let updatedCount = 0;
-            const targetDir = __dirname; // বর্তমান কমান্ড ফোল্ডারের পাথ
+            const targetDir = __dirname; // বর্তমান প্লাগিন্স ফোল্ডারের পাথ
 
             // লুপ চালিয়ে প্রতিটি ফাইল ডাউনলোড করা
             for (const file of folderResponse.data) {
@@ -65,7 +65,7 @@ module.exports = {
             }, 2500);
 
         } catch (error) {
-            await api.sendMessage(threadId, { text: `❌ Error: ${error.message}\nদয়া করে আপনার গিটহাব ফোল্ডারের নাম ঠিক আছে কি না চেক করুন।` });
+            await api.sendMessage(threadId, { text: `❌ Error: ${error.message}\nদয়া করে আপনার গিটহাবের ফোল্ডার বা ইউজারনেম চেক করুন।` });
         }
     }
 };
