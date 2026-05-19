@@ -47,7 +47,7 @@ module.exports = {
 
         participants.forEach((participant, index) => {
             // আপনার অরিজিনাল মেনশন টেক্সট লজিক (যাতে ব্লু ট্যাগ কাজ করে)
-            mentionText += `│ 🎀🌸 ${index + 1}. @${participant.id.split('@')[0]}\n`;
+            mentionText += `│ ${index + 1}. @${participant.id.split('@')[0]}\n`;
             mentions.push(participant.id);
         });
 
